@@ -53,6 +53,27 @@ export const Navbar: React.FC<NavbarProps> = ({
       }`}
     >
       <div className="max-w-7xl mx-auto px-6 md:px-12 flex items-center justify-between">
+        {/* Brand Typographical Wordmark */}
+        <button
+          onClick={() => scrollTo('destinations')}
+          className="text-left group flex flex-col focus:outline-none shrink-0"
+        >
+          <span
+            className={`text-base font-serif tracking-[0.22em] font-normal transition-colors ${
+              isScrolled ? 'text-[#2C2A26]' : 'text-[#FAF8F5]'
+            }`}
+          >
+            LEVEL<span className="font-light opacity-80">FLIGHT</span>
+          </span>
+          <span
+            className={`text-[9px] font-mono tracking-[0.25em] uppercase transition-colors ${
+              isScrolled ? 'text-[#8B734B]' : 'text-[#EAE5D9]/80'
+            }`}
+          >
+            Consular Advisory
+          </span>
+        </button>
+
         {/* Desktop Navigation Links */}
         <nav className="hidden lg:flex items-center gap-8 text-sm">
           <button
@@ -160,41 +181,41 @@ export const Navbar: React.FC<NavbarProps> = ({
 
       {/* Mobile Drawer Menu */}
       {isMobileMenuOpen && (
-        <div className="sm:hidden bg-navy-950 text-ivory-100 border-t border-ivory-100/10 px-6 py-6 space-y-4">
+        <div className="sm:hidden bg-[#FAF8F5] text-[#2C2A26] border-t border-[#D6D1C7] px-6 py-6 space-y-4 shadow-xl">
           <div className="flex flex-col space-y-3 text-sm font-medium">
             <button
               onClick={() => scrollTo('destinations')}
-              className="text-left py-2 hover:text-gold-400 transition-colors border-b border-navy-800"
+              className="text-left py-2 hover:text-[#8B734B] transition-colors border-b border-[#E6E1D6]"
             >
               Destinations
             </button>
             <button
               onClick={() => scrollTo('services')}
-              className="text-left py-2 hover:text-gold-400 transition-colors border-b border-navy-800"
+              className="text-left py-2 hover:text-[#8B734B] transition-colors border-b border-[#E6E1D6]"
             >
               Visa & Services
             </button>
             <button
               onClick={() => scrollTo('how-it-works')}
-              className="text-left py-2 hover:text-gold-400 transition-colors border-b border-navy-800"
+              className="text-left py-2 hover:text-[#8B734B] transition-colors border-b border-[#E6E1D6]"
             >
               How It Works
             </button>
             <button
               onClick={() => scrollTo('about')}
-              className="text-left py-2 hover:text-gold-400 transition-colors border-b border-navy-800"
+              className="text-left py-2 hover:text-[#8B734B] transition-colors border-b border-[#E6E1D6]"
             >
               About Us
             </button>
             <button
               onClick={() => scrollTo('offices')}
-              className="text-left py-2 hover:text-gold-400 transition-colors border-b border-navy-800"
+              className="text-left py-2 hover:text-[#8B734B] transition-colors border-b border-[#E6E1D6]"
             >
               Agency Offices
             </button>
             <button
               onClick={() => scrollTo('faq')}
-              className="text-left py-2 hover:text-gold-400 transition-colors border-b border-navy-800"
+              className="text-left py-2 hover:text-[#8B734B] transition-colors border-b border-[#E6E1D6]"
             >
               FAQ
             </button>
@@ -206,7 +227,7 @@ export const Navbar: React.FC<NavbarProps> = ({
                 setIsMobileMenuOpen(false);
                 onBookClick();
               }}
-              className="w-full py-3 bg-gold-500 text-navy-950 text-xs font-semibold uppercase tracking-wider flex items-center justify-center gap-2"
+              className="w-full py-3.5 bg-[#2C2A26] hover:bg-[#1C1917] text-[#FAF8F5] text-xs font-medium uppercase tracking-widest flex items-center justify-center gap-2 transition-colors"
             >
               <Calendar className="w-4 h-4" />
               Schedule Agency Consultation

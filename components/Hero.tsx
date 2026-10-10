@@ -16,21 +16,27 @@ export const Hero: React.FC<HeroProps> = ({
   onExploreDestinations,
 }) => {
   return (
-    <section className="relative w-full h-screen min-h-[700px] overflow-hidden bg-[#2C2A26]">
-      {/* Real High-Resolution Cinematic Photograph */}
+    <section className="relative w-full h-screen min-h-[720px] overflow-hidden bg-[#2C2A26]">
+      {/* Real High-Resolution Architectural & Prestige Metropolitan Landscape */}
       <div className="absolute inset-0 w-full h-full">
         <img
-          src="https://images.unsplash.com/photo-1436491865332-7a61a109cc05?auto=format&fit=crop&q=85&w=2400"
-          alt="International travel in flight"
-          className="w-full h-full object-cover brightness-[0.85] contrast-[1.05]"
+          src="https://images.unsplash.com/photo-1506146332389-18140dc7b2fb?auto=format&fit=crop&q=85&w=2400"
+          alt="International travel and global architecture"
+          className="w-full h-full object-cover brightness-[0.78] contrast-[1.08]"
         />
         {/* Soft elegant vignette */}
-        <div className="absolute inset-0 bg-gradient-to-t from-[#2C2A26]/80 via-transparent to-black/35" />
+        <div className="absolute inset-0 bg-gradient-to-t from-[#2C2A26] via-[#2C2A26]/40 to-black/40" />
       </div>
 
       {/* Hero Content */}
       <div className="relative z-10 h-full max-w-[1400px] mx-auto px-6 md:px-12 flex flex-col justify-center items-center text-center">
         <div className="max-w-3xl space-y-6 animate-fade-in-up">
+          <div className="inline-block">
+            <span className="text-[11px] font-mono uppercase tracking-[0.28em] text-[#EAE5D9]/90 drop-shadow-sm">
+              Consular & International Travel Advisory · United States
+            </span>
+          </div>
+
           <h1 className="text-5xl sm:text-7xl md:text-8xl font-serif font-normal text-[#FAF8F5] tracking-tight leading-[1.05] drop-shadow-sm">
             Travel, <span className="italic font-light text-[#EAE5D9]">elevated.</span>
           </h1>
@@ -56,6 +62,17 @@ export const Hero: React.FC<HeroProps> = ({
               <span>Explore Destinations</span>
             </button>
           </div>
+        </div>
+
+        {/* Quiet Bottom Metric & Accreditation Strip */}
+        <div className="absolute bottom-8 left-6 right-6 hidden md:flex items-center justify-center gap-8 text-xs text-[#EAE5D9]/75 font-mono uppercase tracking-wider border-t border-white/15 pt-5 max-w-4xl mx-auto">
+          <span>4 Agency Suites</span>
+          <span aria-hidden="true" className="text-white/40">·</span>
+          <span>In-Person & Encrypted Video</span>
+          <span aria-hidden="true" className="text-white/40">·</span>
+          <span>Consular Dossier Auditing</span>
+          <span aria-hidden="true" className="text-white/40">·</span>
+          <span>Accredited US Advisors</span>
         </div>
       </div>
     </section>
