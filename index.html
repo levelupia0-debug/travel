@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>LevelFlight — Premium International Travel & Visa Advisory</title>
+    <meta name="description" content="LevelFlight offers elite international travel consultation, visa file preparation, and personalized in-person appointment support. Schedule your agency consultation." />
+    <meta property="og:title" content="LevelFlight — International Travel & Visa Advisory" />
+    <meta property="og:description" content="Discover destinations, prepare visa documents with accredited agency advisors, and book in-person consultations." />
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+      tailwind.config = {
+        theme: {
+          extend: {
+            colors: {
+              navy: {
+                950: '#0A1220',
+                900: '#101D32',
+                800: '#1B2E4B',
+                700: '#263F59',
+              },
+              gold: {
+                600: '#B28E4C',
+                500: '#C6A66B',
+                400: '#D9BC84',
+                300: '#ECD8A8',
+                100: '#FAF4E6',
+              },
+              ivory: {
+                50: '#FAF8F5',
+                100: '#F5F2EB',
+                200: '#EAE5D9',
+                300: '#DDD6C6',
+              },
+              charcoal: '#2C2A26',
+            },
+            fontFamily: {
+              serif: ['Playfair Display', 'serif'],
+              sans: ['Inter', 'sans-serif'],
+            }
+          }
+        }
+      }
+    </script>
+    <style>
+      @import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Playfair+Display:ital,wght@0,400;0,500;0,600;0,700;1,400&display=swap');
+      
+      html {
+        scroll-behavior: smooth;
+        scroll-padding-top: 85px; /* Offset for fixed navbar */
+      }
+
+      body {
+        font-family: 'Inter', sans-serif;
+        background-color: #F5F2EB; /* Warm cream / ivory aesthetic */
+        color: #2C2A26; /* Warm dark charcoal */
+      }
+      
+      h1, h2, h3, h4, .font-serif {
+        font-family: 'Playfair Display', serif;
+      }
+
+      /* Hide browser scrollbar globally */
+      * {
+        scrollbar-width: none !important;
+        -ms-overflow-style: none !important;
+      }
+      ::-webkit-scrollbar {
+        display: none !important;
+        width: 0 !important;
+        height: 0 !important;
+        background: transparent !important;
+      }
+
+      .no-scrollbar::-webkit-scrollbar {
+        display: none;
+      }
+      .no-scrollbar {
+        -ms-overflow-style: none;
+        scrollbar-width: none;
+      }
+
+      @keyframes float-gentle {
+        0%, 100% { transform: translateY(0px); }
+        50% { transform: translateY(-8px); }
+      }
+
+      .animate-float {
+        animation: float-gentle 4s ease-in-out infinite;
+      }
+    </style>
+  <script type="importmap">
+{
+  "imports": {
+    "@google/genai": "https://esm.sh/@google/genai@^1.29.0",
+    "react/": "https://esm.sh/react@^19.2.0/",
+    "react": "https://esm.sh/react@^19.2.0",
+    "react-dom/": "https://esm.sh/react-dom@^19.2.0/"
+  }
+}
+</script>
+<link rel="stylesheet" href="/index.css">
+</head>
+  <body>
+    <div id="root"></div>
+  <script type="module" src="/index.tsx"></script>
+</body>
+</html>
