@@ -45,9 +45,9 @@ export const AppointmentBookingModal: React.FC<AppointmentBookingModalProps> = (
 
   // Form State
   const [appointmentType, setAppointmentType] = useState<Appointment['appointmentType']>(
-    'In-Person Agency Consultation'
+    'Video Conference Advisory'
   );
-  const [selectedOfficeId, setSelectedOfficeId] = useState<string>('new-york-fifth-ave');
+  const [selectedOfficeId, setSelectedOfficeId] = useState<string>('global-video-advisory');
   const [destination, setDestination] = useState<string>(prefilledDestination || 'Japan');
   const [selectedServiceTitle, setSelectedServiceTitle] = useState<string>(
     prefilledService || 'Individual Travel Consultation'
@@ -143,7 +143,7 @@ export const AppointmentBookingModal: React.FC<AppointmentBookingModalProps> = (
         timeSlot: selectedTimeSlot,
         message: message.trim() || undefined,
         status: 'Requested',
-        internalNotes: `Consultation request for ${destination} at ${selectedOffice.city} office.`,
+        internalNotes: `Consultation request for ${destination} via ${selectedOffice.name}.`,
         createdAt: new Date().toISOString(),
       };
 
@@ -166,8 +166,8 @@ export const AppointmentBookingModal: React.FC<AppointmentBookingModalProps> = (
       `DTSTART:${confirmedAppointment.date.replace(/-/g, '')}T140000Z`,
       `DTEND:${confirmedAppointment.date.replace(/-/g, '')}T150000Z`,
       `SUMMARY:LevelFlight Consultation - ${confirmedAppointment.destinationOfInterest} (${confirmedAppointment.referenceNumber})`,
-      `DESCRIPTION:LevelFlight Travel Advisory\\nType: ${confirmedAppointment.appointmentType}\\nOffice: ${selectedOffice.name} - ${selectedOffice.address}\\nDirect: ${selectedOffice.phone}\\nEmail: contact@levelup-ecosystem.com`,
-      `LOCATION:${selectedOffice.address}`,
+      `DESCRIPTION:LevelFlight Travel Advisory\\nType: ${confirmedAppointment.appointmentType}\\nDesk: ${selectedOffice.name}\\nChannel: Secure Online Advisory\\nEmail: contact@levelup-ecosystem.com`,
+      `LOCATION:Encrypted Video Advisory Suite (Link provided via confirmation email)`,
       'STATUS:CONFIRMED',
       'END:VEVENT',
       'END:VCALENDAR',
@@ -211,7 +211,7 @@ export const AppointmentBookingModal: React.FC<AppointmentBookingModalProps> = (
               Schedule Consultation
             </h2>
             <p className="text-xs text-[#78716C] mt-1 font-light">
-              United States agency suites & private video advisory.
+              Private video advisory session & remote dossier audit.
             </p>
           </div>
 
@@ -330,9 +330,9 @@ export const AppointmentBookingModal: React.FC<AppointmentBookingModalProps> = (
                   </span>
                 </div>
                 <div className="flex justify-between items-start pb-2.5 border-b border-[#E6E1D6]">
-                  <span className="text-[#78716C] uppercase font-mono text-[10px] shrink-0">Office Address:</span>
+                  <span className="text-[#78716C] uppercase font-mono text-[10px] shrink-0">Consultation Channel:</span>
                   <span className="text-right text-[#2C2A26] max-w-[280px]">
-                    {selectedOffice.address}
+                    {selectedOffice.name} (Direct video link sent to applicant)
                   </span>
                 </div>
                 <div className="flex justify-between items-center">
@@ -346,7 +346,7 @@ export const AppointmentBookingModal: React.FC<AppointmentBookingModalProps> = (
               {/* Concise note */}
               <div className="p-3.5 bg-[#F5F2EB] border border-[#E6E1D6] text-xs text-[#5D5A53] font-light flex items-center justify-between">
                 <span>Support: contact@levelup-ecosystem.com</span>
-                <span className="font-mono text-[11px] text-[#8B734B]">{selectedOffice.phone}</span>
+                <span className="font-mono text-[11px] text-[#8B734B]">levelup-ecosystem.com</span>
               </div>
 
               {/* Actions */}
@@ -376,9 +376,9 @@ export const AppointmentBookingModal: React.FC<AppointmentBookingModalProps> = (
                 </label>
                 <div className="grid grid-cols-1 sm:grid-cols-3 gap-2.5">
                   {[
-                    { title: 'In-Person', sub: 'Private agency suite', value: 'In-Person Agency Consultation' },
-                    { title: 'Video Call', sub: 'Secure remote session', value: 'Video Conference Advisory' },
-                    { title: 'Document Review', sub: 'File & checklist audit', value: 'Document & File Audit' },
+                    { title: 'Video Advisory', sub: 'Encrypted 1-on-1 session', value: 'Video Conference Advisory' },
+                    { title: 'Document Audit', sub: 'Exhaustive file verification', value: 'Document & File Audit' },
+                    { title: 'Priority Briefing', sub: 'Urgent departure readiness', value: 'Priority Travel Briefing' },
                   ].map((item) => (
                     <button
                       type="button"
@@ -441,33 +441,33 @@ export const AppointmentBookingModal: React.FC<AppointmentBookingModalProps> = (
                 </div>
               </div>
 
-              {/* Office Selection (United States) */}
+              {/* Advisory Desk Selection */}
               <div>
                 <label className="block text-xs font-serif text-[#2C2A26] mb-2.5">
-                  Select US Agency Office
+                  Select Advisory Desk
                 </label>
-                <div className="grid grid-cols-1 sm:grid-cols-2 gap-2.5">
-                  {AGENCY_OFFICES.map((office) => (
+                <div className="space-y-2.5">
+                  {AGENCY_OFFICES.map((desk) => (
                     <button
                       type="button"
-                      key={office.id}
-                      onClick={() => setSelectedOfficeId(office.id)}
-                      className={`p-3.5 text-left border transition-all ${
-                        selectedOfficeId === office.id
+                      key={desk.id}
+                      onClick={() => setSelectedOfficeId(desk.id)}
+                      className={`w-full p-3.5 text-left border transition-all ${
+                        selectedOfficeId === desk.id
                           ? 'border-[#2C2A26] bg-[#F5F2EB] ring-1 ring-[#2C2A26]'
                           : 'border-[#E6E1D6] bg-white hover:border-[#A8A29E]'
                       }`}
                     >
                       <div className="flex items-center justify-between mb-0.5">
                         <strong className="font-serif text-sm text-[#2C2A26] font-medium">
-                          {office.city}
+                          {desk.name}
                         </strong>
                         <span className="text-[10px] font-mono text-[#8B734B] uppercase tracking-wider">
-                          USA
+                          Remote / Worldwide
                         </span>
                       </div>
-                      <p className="text-[11px] text-[#78716C] line-clamp-1 font-light">
-                        {office.address}
+                      <p className="text-[11px] text-[#78716C] font-light">
+                        {desk.address}
                       </p>
                     </button>
                   ))}

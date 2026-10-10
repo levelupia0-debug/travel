@@ -55,7 +55,11 @@ export interface Appointment {
   customerName: string;
   customerEmail: string;
   customerPhone: string;
-  appointmentType: 'In-Person Agency Consultation' | 'Video Conference Advisory' | 'Document & File Audit';
+  appointmentType:
+    | 'Video Conference Advisory'
+    | 'Document & File Audit'
+    | 'Priority Travel Briefing'
+    | 'In-Person Agency Consultation';
   destinationOfInterest: string;
   serviceId?: string;
   agencyOffice: string;

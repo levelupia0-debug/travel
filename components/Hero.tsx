@@ -42,7 +42,7 @@ export const Hero: React.FC<HeroProps> = ({
           </h1>
 
           <p className="max-w-xl mx-auto text-base sm:text-lg text-[#FAF8F5]/90 font-light leading-relaxed">
-            Private travel consultation and consular visa advisory across New York, Washington D.C., Miami, and Los Angeles.
+            Private travel consultation and consular visa advisory. Dedicated one-on-one guidance for international travelers.
           </p>
 
           <div className="flex flex-col sm:flex-row items-center justify-center gap-4 pt-4">
@@ -66,13 +66,13 @@ export const Hero: React.FC<HeroProps> = ({
 
         {/* Quiet Bottom Metric & Accreditation Strip */}
         <div className="absolute bottom-8 left-6 right-6 hidden md:flex items-center justify-center gap-8 text-xs text-[#EAE5D9]/75 font-mono uppercase tracking-wider border-t border-white/15 pt-5 max-w-4xl mx-auto">
-          <span>4 Agency Suites</span>
+          <span>Private Video Advisory</span>
           <span aria-hidden="true" className="text-white/40">·</span>
-          <span>In-Person & Encrypted Video</span>
+          <span>Dossier Auditing</span>
           <span aria-hidden="true" className="text-white/40">·</span>
-          <span>Consular Dossier Auditing</span>
+          <span>One-on-One Specialist Guidance</span>
           <span aria-hidden="true" className="text-white/40">·</span>
-          <span>Accredited US Advisors</span>
+          <span>contact@levelup-ecosystem.com</span>
         </div>
       </div>
     </section>

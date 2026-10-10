@@ -23,14 +23,14 @@ export const HowItWorks: React.FC<HowItWorksProps> = ({ onBookClick }) => {
       title: 'Book',
       subtitle: 'Reserve Private Session',
       description:
-        'Select your preferred agency office (New York, Washington D.C., Miami, Los Angeles) and reserve an available consultation slot.',
+        'Choose your preferred advisory desk and reserve a dedicated video consultation or file audit slot in just a few clicks.',
     },
     {
       number: '03',
       title: 'Meet',
-      subtitle: 'In-Person Consultation',
+      subtitle: 'Private Video Advisory',
       description:
-        'Meet your dedicated advisor at our agency office or through private encrypted video to audit all supporting documentation.',
+        'Meet your dedicated senior advisor via encrypted video conference to audit all supporting documentation and verify criteria.',
     },
     {
       number: '04',
@@ -95,7 +95,7 @@ export const HowItWorks: React.FC<HowItWorksProps> = ({ onBookClick }) => {
               Ready to review your upcoming international journey?
             </h3>
             <p className="text-xs text-[#78716C] mt-1 font-light">
-              Reserve your private meeting suite with an accredited advisor.
+              Reserve your private video advisory session with an accredited advisor.
             </p>
           </div>
           <button

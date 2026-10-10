@@ -23,13 +23,13 @@ export const Footer: React.FC<FooterProps> = ({ onNavClick, onBookClick }) => {
         <div className="max-w-[1800px] mx-auto flex flex-col md:flex-row items-start md:items-center justify-between gap-8">
           <div>
             <span className="text-xs font-mono uppercase tracking-[0.25em] text-[#A8A29E] block mb-3">
-              Consultation Advisory · United States
+              Consultation Advisory
             </span>
             <h3 className="text-3xl md:text-5xl font-serif text-[#F5F2EB] font-normal leading-tight">
               Begin your journey with clarity.
             </h3>
             <p className="text-[#A8A29E] text-sm font-light mt-2">
-              Private consultation suites available in New York, Washington D.C., Miami, and Los Angeles.
+              Private video consultations and document auditing available worldwide.
             </p>
           </div>
 
@@ -50,7 +50,7 @@ export const Footer: React.FC<FooterProps> = ({ onNavClick, onBookClick }) => {
             LEVEL<span className="font-light text-[#A8A29E] ml-1">FLIGHT</span>
           </span>
           <p className="text-[#A8A29E] font-light leading-relaxed">
-            Consular document auditing, passport compliance, and international travel guidance for distinguished travelers across the United States.
+            Consular document auditing, passport compliance, and international travel guidance for distinguished travelers.
           </p>
           <p className="text-xs font-mono text-[#EAE5D9]">
             contact@levelup-ecosystem.com
@@ -100,7 +100,7 @@ export const Footer: React.FC<FooterProps> = ({ onNavClick, onBookClick }) => {
                 onClick={() => onNavClick('offices')}
                 className="hover:text-[#D6D1C7] transition-colors"
               >
-                United States Offices
+                Advisory & Contact
               </button>
             </li>
             <li>
@@ -114,27 +114,23 @@ export const Footer: React.FC<FooterProps> = ({ onNavClick, onBookClick }) => {
           </ul>
         </div>
 
-        {/* Col 3: US Agency Offices */}
+        {/* Col 3: Advisory Desks */}
         <div className="space-y-4">
           <span className="text-xs font-mono uppercase tracking-widest text-[#A8A29E] block">
-            United States Offices
+            Advisory Desks
           </span>
           <div className="space-y-3 text-[#A8A29E] font-light">
             <div>
-              <strong className="text-[#F5F2EB] block font-normal">New York — Fifth Avenue</strong>
-              <span>650 Fifth Avenue, 28th Fl, New York, NY 10019</span>
+              <strong className="text-[#F5F2EB] block font-normal">Private Video Advisory Desk</strong>
+              <span>Encrypted 1-on-1 consular consultation</span>
             </div>
             <div>
-              <strong className="text-[#F5F2EB] block font-normal">Washington — Embassy Row</strong>
-              <span>1700 K Street NW, Suite 1100, Washington, DC 20006</span>
+              <strong className="text-[#F5F2EB] block font-normal">Consular File Audit Desk</strong>
+              <span>Dossier & biometric requirement audit</span>
             </div>
             <div>
-              <strong className="text-[#F5F2EB] block font-normal">Miami — Brickell Avenue</strong>
-              <span>1101 Brickell Ave, South Tower, Miami, FL 33131</span>
-            </div>
-            <div>
-              <strong className="text-[#F5F2EB] block font-normal">Los Angeles — Beverly Hills</strong>
-              <span>9454 Wilshire Blvd, Suite 700, Beverly Hills, CA 90212</span>
+              <strong className="text-[#F5F2EB] block font-normal">Executive Mobility Desk</strong>
+              <span>Bespoke travel preparation & priority routing</span>
             </div>
           </div>
         </div>
@@ -142,14 +138,13 @@ export const Footer: React.FC<FooterProps> = ({ onNavClick, onBookClick }) => {
         {/* Col 4: Central Contacts */}
         <div className="space-y-4">
           <span className="text-xs font-mono uppercase tracking-widest text-[#A8A29E] block">
-            Central Reception
+            Advisory Contact
           </span>
           <div className="space-y-2 text-[#A8A29E] font-mono">
-            <p className="text-sm text-[#F5F2EB]">+1 (212) 890-4420</p>
-            <p>contact@levelup-ecosystem.com</p>
-            <p>advisory@levelup-ecosystem.com</p>
+            <p className="text-sm text-[#F5F2EB]">contact@levelup-ecosystem.com</p>
+            <p>levelup-ecosystem.com</p>
             <p className="text-[11px] font-sans pt-2 text-[#78716C]">
-              Reception open Mon – Fri 09:00 to 18:30 EST. Consultations by scheduled appointment.
+              Desk open Mon – Fri 09:00 to 18:00 EST / CET. Consultations by scheduled appointment.
             </p>
           </div>
         </div>

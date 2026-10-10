@@ -124,7 +124,7 @@ export const Navbar: React.FC<NavbarProps> = ({
                 : 'text-[#FAF8F5] hover:text-[#EAE5D9] drop-shadow-sm'
             }`}
           >
-            Agency Offices
+            Advisory & Contact
           </button>
           <button
             onClick={() => scrollTo('faq')}
@@ -211,7 +211,7 @@ export const Navbar: React.FC<NavbarProps> = ({
               onClick={() => scrollTo('offices')}
               className="text-left py-2 hover:text-[#8B734B] transition-colors border-b border-[#E6E1D6]"
             >
-              Agency Offices
+              Advisory & Contact
             </button>
             <button
               onClick={() => scrollTo('faq')}

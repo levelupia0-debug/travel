@@ -23,7 +23,7 @@ export const AboutSection: React.FC = () => {
             LevelFlight was founded on a simple conviction: preparing for international travel should never feel opaque or overwhelming. In an era of shifting global immigration policies, a single missing document can jeopardize months of planning.
           </p>
           <p className="text-lg md:text-xl text-[#5D5A53] font-light leading-relaxed mb-8">
-            We provide private, accredited consular file audits and personalized advisory. Rather than automated shortcuts, we sit down with each traveler in our private suites to review original documentation with institutional care.
+            We provide private, accredited consular file audits and personalized advisory. Rather than automated shortcuts, we work directly with each traveler through dedicated private video sessions and comprehensive document audits.
           </p>
           <img
             src="https://images.unsplash.com/photo-1497366216548-37526070297c?auto=format&fit=crop&q=80&w=1600"
@@ -31,7 +31,7 @@ export const AboutSection: React.FC = () => {
             className="w-full h-[400px] object-cover grayscale contrast-[0.9] brightness-105 mt-12"
           />
           <p className="text-sm font-medium uppercase tracking-widest text-[#A8A29E] mt-4">
-            Executive Consultation Suite, New York Fifth Avenue
+            LevelFlight Private Advisory & Consultation Desk
           </p>
         </div>
       </div>
