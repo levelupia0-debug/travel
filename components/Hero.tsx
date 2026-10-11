@@ -5,6 +5,7 @@
 
 import React from 'react';
 import { Calendar, Compass } from 'lucide-react';
+import airplaneHeroImg from '../src/assets/images/airplane_window_hero_1791673794612.jpg';
 
 interface HeroProps {
   onBookAppointment: () => void;
@@ -17,12 +18,12 @@ export const Hero: React.FC<HeroProps> = ({
 }) => {
   return (
     <section className="relative w-full h-screen min-h-[720px] overflow-hidden bg-[#2C2A26]">
-      {/* Real High-Resolution Architectural & Prestige Metropolitan Landscape */}
+      {/* High-Resolution Airplane Window View */}
       <div className="absolute inset-0 w-full h-full">
         <img
-          src="https://images.unsplash.com/photo-1506146332389-18140dc7b2fb?auto=format&fit=crop&q=85&w=2400"
-          alt="International travel and global architecture"
-          className="w-full h-full object-cover brightness-[0.78] contrast-[1.08]"
+          src={airplaneHeroImg}
+          alt="International flight aerial view from airplane window"
+          className="w-full h-full object-cover brightness-[0.82] contrast-[1.05]"
         />
         {/* Soft elegant vignette */}
         <div className="absolute inset-0 bg-gradient-to-t from-[#2C2A26] via-[#2C2A26]/40 to-black/40" />

@@ -78,12 +78,6 @@ export interface FAQItem {
   category: 'General' | 'Appointments' | 'Visa Requirements' | 'Fees & Policies';
 }
 
-export interface ChatMessage {
-  role: 'user' | 'model';
-  text: string;
-  timestamp: number;
-}
-
 export type ViewState = 
   | { type: 'home' }
   | { type: 'destinations' }
